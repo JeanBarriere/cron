@@ -1,0 +1,25 @@
+{
+  "name": "cron",
+  "version": "1.0.0",
+  "description": "node-cron as a microservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeanBarriere/cron.git"
+  },
+  "keywords": [
+    "cron",
+    "node-cron",
+    "microservice",
+    "oms"
+  ],
+  "author": "JeanBarriere",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JeanBarriere/cron/issues"
+  },
+  "homepage": "https://github.com/JeanBarriere/cron#readme"
+}
