@@ -1,0 +1,47 @@
+oms: 1
+
+info:
+  version: 1.0.0
+  title: cron
+  description: Schedule events using patterns
+
+lifecycle:
+  startup:
+    command: ["node", "index.js"]
+
+health:
+  http:
+    path: /health
+    port: 5000
+
+actions:
+  job:
+    help: Schedule a cron job
+    events:
+      schedule:
+        help: Triggered anytime a cron job is ticked
+        arguments:
+          pattern:
+            type: string
+            in: requestBody
+            help: A cron pattern (e.g. '* * * * *')
+        http:
+          port: 5000
+          subscribe:
+            method: post
+            path: /subscribe
+            contentType: application/json
+          unsubscribe:
+            path: /unsubscribe
+            method: post
+            contentType: application/json
+        output:
+          contentType: application/json
+          type: object
+          properties:
+            pattern:
+              help: The pattern that has been scheduled
+              type: string
+            ticked:
+              help: should be true
+              type: boolean
