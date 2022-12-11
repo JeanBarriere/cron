@@ -25,7 +25,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cron": "^1.7.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "node-fetch": "^2.6.0",
     "require-context": "^1.1.0",
     "uuid": "^3.3.3"
